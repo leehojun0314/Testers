@@ -3,33 +3,40 @@ import Image from "next/image";
 import styled from "styled-components";
 import AppLink from "./AppLink";
 import Container from "./Container";
-import Logo from "./Logo";
+import Logo, { StyledLogo } from "./Logo";
+import NavLink from "./NavLink";
 // import Logo from "public/images/logo";
 const Header: NextPage = () => {
 	return (
 		<HeaderWrapper>
 			<Container>
-				{/* <Image
-					src="/images/Logo.png"
-					alt="testersLogo"
-					width="100%"
-					height="50px"
-				></Image> */}
-				<div className="logo">
-					<Logo />
-				</div>
-				<nav>
+				<Logo />
+				<nav className="leftNav">
 					<ul className="clearfix">
 						<li>
-							<AppLink label="테스트" href="/test"></AppLink>
+							<NavLink href="/">
+								<p className="navList">홈</p>
+							</NavLink>
 						</li>
 						<li>
-							<AppLink label="순위" href="/ranking"></AppLink>
+							<NavLink href="/apply">
+								<p className="navList">응시하기</p>
+							</NavLink>
 						</li>
 						<li>
-							<AppLink label="만들기" href="/create"></AppLink>
+							<NavLink href="/test">
+								<p className="navList">만들기</p>
+							</NavLink>
 						</li>
 					</ul>
+				</nav>
+				<nav className="rightNav">
+					<li>
+						<AppLink label="로그인" href="/login" />
+					</li>
+					<li>
+						<AppLink label="회원가입" href="/signup" />
+					</li>
 				</nav>
 			</Container>
 		</HeaderWrapper>
@@ -39,24 +46,38 @@ export default Header;
 
 const HeaderWrapper = styled.header`
 	height: 68px;
-	background-color: blue;
+	background-color: ${({ theme }) => theme.blue};
 	position: sticky;
 	top: 0px;
 	Image {
 	}
 	nav {
 		display: inline-block;
-		padding-left: 32px;
+		/* padding-left: 32px; */
+		position: relative;
+		top: 11px;
+		font-size: 16px;
+		font-weight: bold;
 	}
+
 	li {
 		float: left;
-		padding-left: 30px;
+		padding-left: 24px;
+		list-style: none;
+		cursor: pointer;
 	}
-	.logo {
-		/* height: inherit; */
+	.navList {
+		color: white;
+	}
+
+	${StyledLogo} {
 		display: inline-block;
-		/* height: 68px; */
-		line-height: 68px;
-		/* background-color: red; */
+		position: relative;
+		top: 5px;
+		margin-right: 24px;
+	}
+	.rightNav {
+		float: right;
+		color: white;
 	}
 `;

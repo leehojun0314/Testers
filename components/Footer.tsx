@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
 	return (
 		<StyledFooter>
 			<Container>
-				<p>&copy; Leehojun</p>
+				<p>&copy; Martin & Teo</p>
 			</Container>
 		</StyledFooter>
 	);
@@ -14,8 +14,8 @@ export default Footer;
 
 const StyledFooter = styled.footer`
 	text-align: center;
-	height: 100%;
-	min-height: 396px;
+	height: 396px;
+	line-height: 198px;
 	background-color: ${({ theme }) => theme.dark};
 	color: ${({ theme }) => theme.white};
 `;

@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle<Props>`
 *, *:after, *:before{
     box-sizing: border-box;
     margin: 0;
-    outline: none
+    outline: none;
+    padding: 0;
 }
 body{ 
     font-size: calc(14px + .5vw);

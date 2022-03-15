@@ -23,4 +23,5 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
 export default Layout;
 const StyledMain = styled.main`
 	min-height: 600px;
+	/* background-color: green; */
 `;
