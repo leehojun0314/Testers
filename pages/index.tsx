@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Container from "../components/Container";
 import Image from "next/image";
 import Layout from "../components/Layout";
@@ -46,7 +46,9 @@ const Home: NextPage = () => {
 			</CarouselContainer>
 			<RecommendContainer>
 				<Container>
-					<div className="left">this is left</div>
+					<div className="left">
+						<h3>주니어 개발자를 꿈꾸는 당신을 위해</h3>
+					</div>
 					<div className="right">this is right</div>
 				</Container>
 			</RecommendContainer>
@@ -61,6 +63,7 @@ const CarouselContainer = styled.div`
 	background-color: ${({ theme }) => theme.blue};
 	padding-bottom: 24px;
 `;
+
 const CarouselElement = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -88,24 +91,36 @@ const CarouselElement = styled.div`
 		border: 2px solid ${({ theme }) => theme.white};
 		color: ${({ theme }) => theme.white};
 		font-weight: 100;
+		transition-property: background-color, color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in-out;
+	}
+	button:hover {
+		background-color: #fafafa;
+		color: #293241;
 	}
 `;
+
 const RecommendContainer = styled.div`
-	.left {
-		width: 300px;
-		height: 700px;
-		background-color: blue;
-		box-shadow: 15px 15px 5px grey;
-	}
-	.right {
-		width: 300px;
-		height: 700px;
-		background-color: orange;
-	}
 	${Container} {
+		/* background-color: green; */
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-evenly;
 		margin-top: 24px;
+	}
+
+	.left,
+	.right {
+		width: 500px;
+		height: 500px;
+		border-radius: 10px;
+		box-shadow: 5px 5px 5px ${({ theme }) => theme.dark};
+	}
+	.left {
+		background-color: blue;
+	}
+	.right {
+		background-color: orange;
 	}
 `;

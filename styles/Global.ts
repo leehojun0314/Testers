@@ -25,6 +25,9 @@ a{
 ul{
     list-style: none;
 }
+button{
+    cursor: pointer;
+}
 .clearfix::after{
     content: "";
     display: block;
@@ -37,5 +40,6 @@ ul{
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px)
 }
+
 `;
 export default GlobalStyle;

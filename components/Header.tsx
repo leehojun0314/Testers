@@ -15,27 +15,31 @@ const Header: NextPage = () => {
 					<ul className="clearfix">
 						<li>
 							<NavLink href="/">
-								<p className="navList">홈</p>
+								<p>홈</p>
 							</NavLink>
 						</li>
 						<li>
 							<NavLink href="/apply">
-								<p className="navList">응시하기</p>
+								<p>응시하기</p>
 							</NavLink>
 						</li>
 						<li>
 							<NavLink href="/test">
-								<p className="navList">만들기</p>
+								<p>만들기</p>
 							</NavLink>
 						</li>
 					</ul>
 				</nav>
 				<nav className="rightNav">
 					<li>
-						<AppLink label="로그인" href="/login" />
+						<AppLink href="/login">
+							<p>로그인</p>
+						</AppLink>
 					</li>
 					<li>
-						<AppLink label="회원가입" href="/signup" />
+						<AppLink href="/signup">
+							<p>회원가입</p>
+						</AppLink>
 					</li>
 				</nav>
 			</Container>
@@ -45,10 +49,11 @@ const Header: NextPage = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-	height: 68px;
+	height: 58px;
 	background-color: ${({ theme }) => theme.blue};
 	position: sticky;
 	top: 0px;
+	z-index: 2;
 	Image {
 	}
 	nav {
@@ -58,6 +63,7 @@ const HeaderWrapper = styled.header`
 		top: 11px;
 		font-size: 16px;
 		font-weight: bold;
+		color: white;
 	}
 
 	li {
@@ -66,10 +72,17 @@ const HeaderWrapper = styled.header`
 		list-style: none;
 		cursor: pointer;
 	}
-	.navList {
+	p {
 		color: white;
+		transition: color 0.2s ease-in;
 	}
-
+	p:hover {
+		color: black;
+	}
+	.currentPage {
+		color: black;
+		/* text-decoration: underline; */
+	}
 	${StyledLogo} {
 		display: inline-block;
 		position: relative;
@@ -78,6 +91,5 @@ const HeaderWrapper = styled.header`
 	}
 	.rightNav {
 		float: right;
-		color: white;
 	}
 `;

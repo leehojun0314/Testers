@@ -14,7 +14,7 @@ export default Footer;
 
 const StyledFooter = styled.footer`
 	text-align: center;
-	height: 396px;
+	height: 198px;
 	line-height: 198px;
 	background-color: ${({ theme }) => theme.dark};
 	color: ${({ theme }) => theme.white};
