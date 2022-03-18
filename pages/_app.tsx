@@ -1,7 +1,7 @@
 // import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "../components/common/Header";
 import { ThemeProvider } from "styled-components";
 import theme from "../styles/theme";
 import GlobalStyle from "../styles/Global";
