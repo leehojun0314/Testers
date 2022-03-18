@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import styled, { keyframes } from "styled-components";
-import Container from "../components/Container";
+import Container from "../layouts/Container";
 import Image from "next/image";
-import Layout from "../components/Layout";
+import Layout from "../layouts/Layout";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import React from "react";
+import Recommender from "../components/home/Recommender";
 const Datas: Array<object> = [{ hello: "world" }, { hello: "world" }];
 const Home: NextPage = () => {
 	return (
@@ -47,9 +48,67 @@ const Home: NextPage = () => {
 			<RecommendContainer>
 				<Container>
 					<div className="left">
-						<h3>주니어 개발자를 꿈꾸는 당신을 위해</h3>
+						<Recommender
+							title={"개발자인 당신을 위한 맞춤 테스트"}
+							datas={[
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+							]}
+						/>
 					</div>
-					<div className="right">this is right</div>
+					<div className="right">
+						<Recommender
+							title={"개발자인 당신을 위한 맞춤 테스트"}
+							datas={[
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+								{
+									title: "hello",
+									grade: 1,
+									questionNum: 1,
+									imgUrl: "/images/Logo.png",
+								},
+							]}
+						/>
+					</div>
 				</Container>
 			</RecommendContainer>
 		</Layout>
@@ -76,6 +135,7 @@ const CarouselElement = styled.div`
 		flex-direction: column;
 		align-items: center;
 		padding-top: 50px;
+		color: ${({ theme }) => theme.white};
 	}
 	.rightImage {
 		float: right;
@@ -114,13 +174,13 @@ const RecommendContainer = styled.div`
 	.right {
 		width: 500px;
 		height: 500px;
-		border-radius: 10px;
-		box-shadow: 5px 5px 5px ${({ theme }) => theme.dark};
+		/* border-radius: 10px; */
+		/* box-shadow: 5px 5px 5px ${({ theme }) => theme.dark}; */
 	}
-	.left {
+	/* .left {
 		background-color: blue;
 	}
 	.right {
 		background-color: orange;
-	}
+	} */
 `;

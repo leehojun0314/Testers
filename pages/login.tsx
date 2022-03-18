@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "../components/Container";
-import Layout from "../components/Layout";
+import Container from "../layouts/Container";
+import Layout from "../layouts/Layout";
 
 const Login: React.FC = () => {
 	return (

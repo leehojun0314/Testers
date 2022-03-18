@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { ReactElement } from "react";
 import { useRouter } from "next/router";
 interface NavLinkProps {
 	href: string;
+	children: ReactElement;
 }
 const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
 	const child = React.Children.only(children);

@@ -4,10 +4,11 @@ import styled, { CSSProp } from "styled-components";
 
 const Logo: React.FC = () => {
 	return (
-		<StyledLogo>
-			{/* <Link href="/">TESTERS</Link> */}
-			TESTERS
-		</StyledLogo>
+		<>
+			<Link href={"/"} passHref>
+				<StyledLogo>TESTERS</StyledLogo>
+			</Link>
+		</>
 	);
 };
 export const StyledLogo = styled.span`

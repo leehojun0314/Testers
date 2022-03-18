@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import styled from "styled-components";
 import AppLink from "./AppLink";
-import Container from "./Container";
+import Container from "../../layouts/Container";
 import Logo, { StyledLogo } from "./Logo";
 import NavLink from "./NavLink";
 // import Logo from "public/images/logo";
@@ -88,6 +88,7 @@ const HeaderWrapper = styled.header`
 		position: relative;
 		top: 5px;
 		margin-right: 24px;
+		cursor: pointer;
 	}
 	.rightNav {
 		float: right;

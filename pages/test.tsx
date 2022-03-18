@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Container from "../components/Container";
+import Layout from "../layouts/Layout";
+import Container from "../layouts/Container";
 const Test: React.FC = () => {
 	return (
 		<Layout pageTitle="Test">

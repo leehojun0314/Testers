@@ -1,6 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import React from "react";
-import theme from "../styles/theme";
+import theme from "../../styles/theme";
 interface AppLinkProps extends LinkProps {
 	href: string;
 }
