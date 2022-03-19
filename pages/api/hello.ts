@@ -23,19 +23,4 @@ export default async function handler(
 				});
 		}
 	});
-	// sql
-	// 	.connect(sqlConfig)
-	// 	.then((pool) => {
-	// 		console.log();
-	// 		return pool.request().query("select * from TestTable");
-	// 	})
-	// 	.then((result) => {
-	// 		console.log("result: ", result);
-	// 		res.send(result);
-	// 	})
-	// 	.catch((err) => {
-	// 		console.log("err: ", err);
-	// 		res.status(500).send(err);
-	// 	});
-	// res.status(200).json({ name: "John Doe" });
 }

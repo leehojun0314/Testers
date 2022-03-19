@@ -70,11 +70,11 @@ const HeaderWrapper = styled.header`
 		float: left;
 		padding-left: 24px;
 		list-style: none;
-		cursor: pointer;
 	}
 	p {
 		color: white;
 		transition: color 0.2s ease-in;
+		cursor: pointer;
 	}
 	p:hover {
 		color: black;
