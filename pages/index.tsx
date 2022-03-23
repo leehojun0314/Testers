@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import React from "react";
 import Recommender from "../components/home/Recommender";
+import fakeData from "../constants";
 const Datas: Array<object> = [{ hello: "world" }, { hello: "world" }];
 const Home: NextPage = () => {
 	return (
@@ -49,64 +50,14 @@ const Home: NextPage = () => {
 				<Container>
 					<div className="left">
 						<Recommender
-							title={"개발자인 당신을 위한 맞춤 테스트"}
-							datas={[
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-							]}
+							title={"일간 인기 테스트"}
+							datas={fakeData}
 						/>
 					</div>
 					<div className="right">
 						<Recommender
-							title={"개발자인 당신을 위한 맞춤 테스트"}
-							datas={[
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-								{
-									title: "hello",
-									grade: 1,
-									questionNum: 1,
-									imgUrl: "/images/Logo.png",
-								},
-							]}
+							title={"주간 인기 테스트"}
+							datas={fakeData}
 						/>
 					</div>
 				</Container>

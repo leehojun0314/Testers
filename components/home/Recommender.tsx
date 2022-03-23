@@ -15,7 +15,7 @@ const Recommender: React.FC<RecommenderProps> = ({ title, datas }) => {
 	return (
 		<StyledRecommender>
 			<h1>{title}</h1>
-			<div>
+			<StyledDiv>
 				{datas.map((el, idx) => {
 					return (
 						<RecommendModule
@@ -27,7 +27,7 @@ const Recommender: React.FC<RecommenderProps> = ({ title, datas }) => {
 						/>
 					);
 				})}
-			</div>
+			</StyledDiv>
 		</StyledRecommender>
 	);
 };
@@ -35,5 +35,13 @@ export default Recommender;
 const StyledRecommender = styled.div`
 	h1 {
 		font-size: 2rem;
+		background-color: #3993f3;
+		border-radius: 15px;
+		text-align: center;
+		color: #fdfdfd;
 	}
 `;
+const StyledDiv = styled.div`
+	border-radius: 12px;
+	margin-top: 10px;
+`
