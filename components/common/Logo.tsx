@@ -13,7 +13,7 @@ const Logo: React.FC = () => {
 };
 export const StyledLogo = styled.span`
 	text-align: center;
-	color: ${({ theme }) => theme.white};
+	color: ${({ theme }) => theme.blue};
 	font-weight: 900;
 	font-size: 24px;
 `;

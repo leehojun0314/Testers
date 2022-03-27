@@ -20,7 +20,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: ${({ theme }) => theme.white}
+    color: ${({ theme }) => theme.dark}
 }
 ul{
     list-style: none;
